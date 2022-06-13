@@ -10,8 +10,13 @@ import java.util.Random;
 public class PirateService {
 
     private final List<String> pirates = List.of("Blackbeard", "Henry Morgan", "Sir Francis Drake");
+    private final Random rnd = new Random();
 
     public String randomPirate() {
-        return pirates.get(new Random().nextInt(pirates.size()));
+        return pirates.get(rnd.nextInt(pirates.size()));
+    }
+
+    public String getPirateName(int index) {
+        return pirates.get(index);
     }
 }
